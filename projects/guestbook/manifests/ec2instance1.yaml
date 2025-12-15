@@ -1,0 +1,21 @@
+apiVersion: compute.cloud.com/v1
+kind: EC2instance
+metadata:
+  name: ec2instance1
+spec:
+  sshKey: my-ssh-key
+  instanceType: t3.micro
+  subnet: subnet-1234567890
+  tags:
+    Environment: dev
+    Owner: dhanush
+  storage:
+    size: 20
+    type: gp3
+  additionalStorage:
+    - size: 50
+      type: gp3
+    - size: 100
+      type: gp3
+  amiID: ami-0abcdef1234567890
+  instancename: dhanush-ec2instance-1
